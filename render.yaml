@@ -1,6 +1,1 @@
-services:
-  - type: web
-    name: multi-acc-bot
-    env: python
-    buildCommand: "pip install --upgrade pip setuptools wheel && pip install --prefer-binary -r requirements.txt"
-    startCommand: "python bot.py"
+
