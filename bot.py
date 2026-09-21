@@ -239,7 +239,7 @@ async def save_stock_command(message: types.Message):
         conn.commit()
         conn.close()
         
-        await message.reply(f"✅ সফলভাবে **{category.upper()}** ক্যাটাগরিতে নতুন স্টক যুক্ত করা হয়েছে!")
+        await message.reply(f"✅ সফলভাবে **{category.upper()}** ক্যাটাগরিতে নতুন স্টক যুক্ত করা হয়েছে!", parse_mode="Markdown")
     except Exception as e:
         await message.reply(f"❌ ত্রুটি ঘটেছে: {str(e)}")
 
@@ -264,7 +264,7 @@ async def add_balance_command(message: types.Message):
         conn.commit()
         conn.close()
         
-        await message.reply(f"✅ সফলভাবে ইউজার `{target_user_id}` এর অ্যাকাউন্টে ৳{amount} BDT যোগ করা হয়েছে!")
+        await message.reply(f"✅ সফলভাবে ইউজার `{target_user_id}` এর অ্যাকাউন্টে ৳{amount} BDT যোগ করা হয়েছে!", parse_mode="Markdown")
         
         try:
             await bot.send_message(target_user_id, f"🎉 আপনার অ্যাকাউন্টে সফলভাবে **৳{amount} BDT** ব্যালেন্স অ্যাড করা হয়েছে!", parse_mode="Markdown")
